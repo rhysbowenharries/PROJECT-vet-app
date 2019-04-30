@@ -32,15 +32,9 @@ attr_accessor :id, :name
     SqlRunner.run(sql, values)
   end
 
-  def update
+  def update()
     sql = "UPDATE vets
-    SET
-    (
-      name
-    ) =
-    (
-      $1
-    )
+    SET name = $1
     WHERE id = $2"
     values = [@name, @id]
     SqlRunner.run(sql, values)

@@ -1,11 +1,6 @@
 require_relative('../models/vet')
 require_relative('../models/animal')
 
-require ('pry')
-
-Animal.delete_all
-Vet.delete_all
-
 vet1 = Vet.new({'name' => 'Arnold Anderson'})
 vet2 = Vet.new({'name' => 'Bernard Bond'})
 vet3 = Vet.new({'name' => 'Catherine Constantine'})
@@ -61,9 +56,3 @@ animal2.save
 animal3.save
 animal4.save
 animal5.save
-
-
-
-
- binding.pry
- nil

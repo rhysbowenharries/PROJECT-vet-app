@@ -1,0 +1,23 @@
+<form method="post" action="/great-dane/<%= @vet.id %>">
+
+<div class="form-wrapper">
+
+<div class="form-el">
+  <label for="name">Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name"
+  value="<%= @vet.name %>"
+  />
+</div>
+
+<div class="form-el">
+  <input type='submit' value="Enhance Vet">
+</div>
+
+
+
+</div>
+
+</form>

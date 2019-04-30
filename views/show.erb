@@ -1,0 +1,7 @@
+<p>Name: <%= @vet.name %></p>
+
+<p>Domesticated lifeforms under care:</p>
+
+<p><a href="/great-dane/<%= @vet.id %>/edit">Edit</a></p>
+
+<form action="/great-dane/<%= @vet.id %>/delete" method="post"><input type="submit" value="Delete"></form>

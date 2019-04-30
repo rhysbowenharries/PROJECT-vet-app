@@ -1,0 +1,49 @@
+<!-- name,
+stardate_of_birth,
+type_of_animal,
+owner_information,
+treatment_notes,
+vet_tag
+) -->
+
+<form method="post" action="/lesser-danes">
+  <label for="name-field">Name:</label>
+  <input type="text"
+  name="name"
+  id= "name-field"
+  />
+
+  <label for="dob-field">Stardate of Birth:</label>
+  <input type="text"
+  name="stardate_of_birth"
+  id= "dob-field"
+  />
+
+  <label for="animal-type-field">Animal Type:</label>
+  <input type="text"
+  name="type_of_animal"
+  id= "animal-type-field"
+  />
+
+  <label for="owner-information-field">Owner Information:</label>
+  <input type="text"
+  name="owner_information"
+  id= "owner-information-field"
+  />
+
+  <label for="treatment-notes-field">Treatment Notes:</label>
+  <input type="text"
+  name="treatment_notes"
+  id= "treatment-note-field"
+  />
+
+  <label for="vet_select">Select vet:</label>
+    <select name="vet_tag" id="vet_select">
+      <% @vets.each do |vet| %>
+        <option value=<%= vet.id %>><%= vet.name.capitalize %></option>
+      <% end %>
+    </select>
+
+  <input type="submit" value="make babies">
+
+</form>

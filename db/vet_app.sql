@@ -13,5 +13,5 @@ CREATE TABLE animals (
   type_of_animal VARCHAR(255),
   owner_information VARCHAR(255),
   treatment_notes VARCHAR(255),
-  vet_tag INT8 REFERENCES vets(id) ON DELETE SET NULL
+  vet_tag INT8 REFERENCES vets(id) ON DELETE CASCADE
 );

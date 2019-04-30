@@ -1,0 +1,16 @@
+<h1>Great Dane Pet Health</h1>
+<h3>"Great at dein ya pets hewf, ya ken?"</h3>
+
+<div id="vet-wrapper">
+  <% @vets.each do |vet| %>
+
+  <div class="vet">
+    <h3><a href="/great-dane/<%= vet.id %>"><%= vet.name %></a></h3>
+    <p>Name: <%= vet.name %></p>
+
+
+
+  </div>
+
+  <% end  %>
+</div>

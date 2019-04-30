@@ -1,0 +1,19 @@
+
+body {
+  padding: 30px;
+  font-family: 'courier', cursive;
+  font-size: 20px;
+  color: black;
+  background-image: url("/hatchi.gif");
+  background-size: 1500px 800px;
+  position: sticky;
+}
+
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+a:hover {
+  color: darkred;
+}

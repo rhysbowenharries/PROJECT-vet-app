@@ -8,33 +8,33 @@ also_reload('models/*')
 # index
 get '/great-dane' do
   @vets = Vet.all
-  erb(:index)
+  erb(:"vets/index")
 end
 
 
 # new
 get '/great-dane/new' do
-  erb(:new)
+  erb(:"vets/new")
 end
 
 
 #show
 get '/great-dane/:id' do
   @vet = Vet.find(params[:id])
-  erb(:show)
+  erb(:"vets/show")
 end
 
 #create
 post '/great-dane' do
   @vet = Vet.new(params)
   @vet.save
-  erb(:create)
+  erb(:"vets/create")
 end
 
 # edit
 get '/great-dane/:id/edit' do
   @vet = Vet.find(params[:id])
-  erb(:edit)
+  erb(:"vets/edit")
 end
 
 #UPDATE
@@ -48,7 +48,7 @@ end
 post '/great-dane/:id/delete' do
   vet = Vet.find(params[:id])
   vet.delete
-  erb(:delete)
+  erb(:"vets/delete")
 end
 
 #animals index

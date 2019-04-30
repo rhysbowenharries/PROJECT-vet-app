@@ -1,6 +1,7 @@
+<h2>Da Critters</h2>
+
 <% @animals.each do |animal| %>
   <p><%= animal.name %> the <%= animal.type_of_animal%></p>
-
 
   <p>Vet ID: <%= animal.vet_tag %></p>
 
@@ -8,9 +9,8 @@
 
 <p><a href="/lesser-danes/ <%= animal.id %>/edit">Edit animal details</a></p>
 
-<form method="post" action="/lesser-danes/<%= animal.id %>/delete">
+<form method="post" action="/lesser-danes/<%= animal.id %>/delete">PLIZ dont hurt me:
   <input type="submit" value="Destroy Animal"/>
 </form>
-
 
 <% end %>

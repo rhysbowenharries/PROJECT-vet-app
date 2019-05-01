@@ -5,6 +5,12 @@
 
 <p>Domesticated lifeforms under care:</p>
 
-<p><a href="/great-dane/<%= @vet.id %>/edit">Edit</a></p>
+<div id="patients-wrapper">
+  <% @patients.each do |patient| %>
+  <p><%= patient.name %>: <a href="/lesser-danes/<%= patient.id %>">Go to pet</a></p>
+  <% end %>
+</div>
+
+<p><a href="/great-dane/<%= @vet.id %>/edit">Edit Vet</a></p>
 
 <form action="/great-dane/<%= @vet.id %>/delete" method="post"><input type="submit" value="Delete"></form>

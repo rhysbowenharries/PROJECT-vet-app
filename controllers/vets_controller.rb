@@ -2,7 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/animal')
 require_relative('../models/vet')
-also_reload('../models/*')
+require('pry')
 
 get '/great-dane' do
   @vets = Vet.all
@@ -15,6 +15,7 @@ end
 
 get '/great-dane/:id' do
   @vet = Vet.find(params[:id])
+  @patients = Animal.find_by_vet_tag(params[:id])
   erb(:"vets/show")
 end
 

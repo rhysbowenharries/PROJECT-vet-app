@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 class Animal
 
   attr_accessor :name, :stardate_of_birth, :type_of_animal, :owner_information, :treatment_notes, :vet_tag, :id
-  
+
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -46,8 +46,7 @@ class Animal
       owner_information,
       treatment_notes,
       vet_tag
-    )
-      VALUES
+    ) =
     (
       $1,$2,$3,$4,$5,$6
     )
@@ -70,6 +69,16 @@ class Animal
     result = SqlRunner.run(sql ,values).first
     animal = Animal.new(result)
     return animal
+  end
+
+# 1st extention: show vets' animals
+  def self.find_by_vet_tag(tag)
+    sql = "SELECT * FROM animals
+    WHERE vet_tag = $1"
+    values = [tag]
+    result = SqlRunner.run(sql ,values)
+    animals = map_items(result)
+    return animals
   end
 
   def self.delete_all

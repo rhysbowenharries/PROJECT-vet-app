@@ -3,4 +3,5 @@
 <p>Type of Animal: <%= @animal.type_of_animal %></p>
 <p>Owner Information: <%= @animal.owner_information %></p>
 <p>Treatment notes: <%= @animal.treatment_notes %></p>
-<p>Vet ID: <%= @animal.vet_tag %></p>
+<p>Vet ID: <%= @animal.vet_tag %>
+<a href="/great-dane/<%= @animal.vet_tag %>"> Go to vet</a></p>
